@@ -3,7 +3,17 @@
 
 <head>
     <style>
-        #header {
+        body {
+            max-width: 40rem;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .header {
             align-content: center;
             padding-top: 1rem;
             padding-bottom: 1rem;
@@ -57,88 +67,68 @@
 </head>
 
 <body>
-    <h1 id=header>Welcome To the API Library</h5>
-        <h3 id=header>Here You Will Find an Assortment of Free APIs to Use in Your Projects</h3>
-        &emsp;
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for APIs..">
-
-<ul id="myUL">
-  <li><a href="https://github.com/lennertVanSever/graphcountries">country</a></li>
-  <li><a href="https://github.com/dword4/nhlapi">NHL</a></li>
-
-  <li><a href="https://opentdb.com/api_config.php">vocab</a></li>
-  <li><a href="https://api.weather.gov">weather</a></li>
-
-  <li><a href="https://github.com/joshwcomeau/RequestKittens">kitten</a></li>
-  <li><a href="https://www.scorebat.com/video-api/v1/">soccer</a></li>
-</ul>
-<script>
-    function myFunction() {
-      var input, filter, ul, li, a, i, txtValue;
-      input = document.getElementById('myInput');
-      filter = input.value.toUpperCase();
-      ul = document.getElementById("myUL");
-      li = ul.getElementsByTagName('li');
-
-      for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          li[i].style.display = "";
-        } else {
-          li[i].style.display = "none";
+    <h1 class="header">Welcome To the API Library</h1>
+    <h3 class="header">Here You Will Find an Assortment of Free APIs to Use in Your Projects</h3>
+    &emsp;
+    <input type="text" id="searchInput" onkeyup="performSearch()" placeholder="Search for APIs..">
+    <script>
+        function performSearch() {
+            let query = document.querySelector("#searchInput").value.toLowerCase();
+            for (let element of document.querySelectorAll(".api")) {
+                if (element.textContent.toLowerCase().includes(query) || query.trim().length == 0) {
+                    element.classList.remove("hidden");
+                } else {
+                    element.classList.add("hidden");
+                }
+            }
         }
-      }
-    }
     </script>
-        <div class = "text">
+    <div class="text">
         &emsp;
-        <div>
-        <h3 id=NHL> <a href="https://github.com/dword4/nhlapi">The NHL API</a></h3>
-        <h3>This API has team names, venues, cities, etc.</h3>
+        <div class="api">
+            <h3 id="NHL"> <a href="https://github.com/dword4/nhlapi">The NHL API</a></h3>
+            <h3>This API has team names, venues, cities, etc.</h3>
         </div>
 
-        <div>
-        <h3 id=vocab> <a href="https://opentdb.com/api_config.php">Vocab API</a></h3>
-        <h3>This API has trivia questions with a range of difficulties and topics</h3>
+        <div class="api">
+            <h3 id="vocab"> <a href="https://opentdb.com/api_config.php">Vocab API</a></h3>
+            <h3>This API has trivia questions with a range of difficulties and topics</h3>
         </div>
 
-        <div>
-        <h3 id=weather> <a href="https://api.weather.gov">Weather API</a></h3>
-        <h3> This API contains info about the current and future weather</h3>
+        <div class="api">
+            <h3 id="weather"> <a href="https://api.weather.gov">Weather API</a></h3>
+            <h3> This API contains info about the current and future weather</h3>
         </div>
 
-        <div>
-        <h3 id=country> <a href="https://github.com/lennertVanSever/graphcountries">Country API</a></h3>
-        <h3> This API contains info of countries currency, flags, neighboring countries, etc.</h3>
+        <div class="api">
+            <h3 id="country"> <a href="https://github.com/lennertVanSever/graphcountries">Country API</a></h3>
+            <h3> This API contains info of countries currency, flags, neighboring countries, etc.</h3>
         </div>
 
-        <div>
-        <h3 id=kitten> <a href="https://github.com/joshwcomeau/RequestKittens">Kitten API</a></h3>
-        <h3> This API contains random pitures of cats and kittens</h3>
+        <div class="api">
+            <h3 id="kitten"> <a href="https://github.com/joshwcomeau/RequestKittens">Kitten API</a></h3>
+            <h3> This API contains random pitures of cats and kittens</h3>
         </div>
 
-        <div>
-        <h3 id=soccer> <a href="https://www.scorebat.com/video-api/v1/">Soccer API</a></h3>
-        <h3> This API contains info of past and present soccer games and stats</h3>
+        <div class="api">
+            <h3 id="soccer"> <a href="https://www.scorebat.com/video-api/v1/">Soccer API</a></h3>
+            <h3> This API contains info of past and present soccer games and stats</h3>
         </div>
-        
     </div>
-        &emsp;
-        <h3 id=header> Want to expand this list? submit ideas or links below!</h3>
-        </script> <!-- begin wwww.htmlcommentbox.com -->
-        <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
-        <link rel="stylesheet" type="text/css"
-            href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
-        <script type="text/javascript" id="hcb"> /*<!--*/ if (!window.hcb_user) { hcb_user = {}; } (function () {
-                var s = document.createElement("script"),
-                    l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"), h = "https://www.htmlcommentbox.com"; s.setAttribute("type", "text/javascript")
-                    ; s.setAttribute("src", h + "/jread?page=" + encodeURIComponent(l).replace("+", "%2B") + "&mod=%241%24wq1rdBcg%24PGi05SvV0pzqEFxlXq9pm1" + "&opts=16862&num=10&ts=1596982661340");
-                if (typeof s != "undefined") document.getElementsByTagName("head")[0].appendChild(s);
-            })(); /*-->*/ </script>
-        <!-- end www.htmlcommentbox.com -->
-        </script>
-
+    &emsp;
+    <h3 id=header> Want to expand this list? submit ideas or links below!</h3>
+    </script> <!-- begin wwww.htmlcommentbox.com -->
+    <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
+    <link rel="stylesheet" type="text/css"
+        href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+    <script type="text/javascript" id="hcb"> /*<!--*/ if (!window.hcb_user) { hcb_user = {}; } (function () {
+            var s = document.createElement("script"),
+                l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"), h = "https://www.htmlcommentbox.com"; s.setAttribute("type", "text/javascript")
+                ; s.setAttribute("src", h + "/jread?page=" + encodeURIComponent(l).replace("+", "%2B") + "&mod=%241%24wq1rdBcg%24PGi05SvV0pzqEFxlXq9pm1" + "&opts=16862&num=10&ts=1596982661340");
+            if (typeof s != "undefined") document.getElementsByTagName("head")[0].appendChild(s);
+        })(); /*-->*/ </script>
+    <!-- end www.htmlcommentbox.com -->
+    </script>
 </body>
 
 </html>
