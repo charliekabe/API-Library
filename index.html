@@ -62,68 +62,68 @@
         &emsp;
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for APIs..">
 
-<ul id="myUL">
-  <li><a href="https://github.com/lennertVanSever/graphcountries">country</a></li>
-  <li><a href="https://github.com/dword4/nhlapi">NHL</a></li>
+        <ul id="myUL">
+            <li><a href="https://github.com/lennertVanSever/graphcountries">country</a></li>
+            <li><a href="https://github.com/dword4/nhlapi">NHL</a></li>
 
-  <li><a href="https://opentdb.com/api_config.php">vocab</a></li>
-  <li><a href="https://api.weather.gov">weather</a></li>
+            <li><a href="https://opentdb.com/api_config.php">vocab</a></li>
+            <li><a href="https://api.weather.gov">weather</a></li>
 
-  <li><a href="https://github.com/joshwcomeau/RequestKittens">kitten</a></li>
-  <li><a href="https://www.scorebat.com/video-api/v1/">soccer</a></li>
-</ul>
-<script>
-    function myFunction() {
-      var input, filter, ul, li, a, i, txtValue;
-      input = document.getElementById('myInput');
-      filter = input.value.toUpperCase();
-      ul = document.getElementById("myUL");
-      li = ul.getElementsByTagName('li');
+            <li><a href="https://github.com/joshwcomeau/RequestKittens">kitten</a></li>
+            <li><a href="https://www.scorebat.com/video-api/v1/">soccer</a></li>
+        </ul>
+        <script>
+            function myFunction() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById('myInput');
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName('li');
 
-      for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          li[i].style.display = "";
-        } else {
-          li[i].style.display = "none";
-        }
-      }
-    }
-    </script>
-        <div class = "text">
-        &emsp;
-        <div>
-        <h3 id=NHL> <a href="https://github.com/dword4/nhlapi">The NHL API</a></h3>
-        <h3>This API has team names, venues, cities, etc.</h3>
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
+        <div class="text">
+            &emsp;
+            <div>
+                <h3 id=NHL> <a href="https://github.com/dword4/nhlapi">The NHL API</a></h3>
+                <h3>This API has team names, venues, cities, etc.</h3>
+            </div>
+
+            <div>
+                <h3 id=vocab> <a href="https://opentdb.com/api_config.php">Vocab API</a></h3>
+                <h3>This API has trivia questions with a range of difficulties and topics</h3>
+            </div>
+
+            <div>
+                <h3 id=weather> <a href="https://api.weather.gov">Weather API</a></h3>
+                <h3> This API contains info about the current and future weather</h3>
+            </div>
+
+            <div>
+                <h3 id=country> <a href="https://github.com/lennertVanSever/graphcountries">Country API</a></h3>
+                <h3> This API contains info of countries currency, flags, neighboring countries, etc.</h3>
+            </div>
+
+            <div>
+                <h3 id=kitten> <a href="https://github.com/joshwcomeau/RequestKittens">Kitten API</a></h3>
+                <h3> This API contains random pitures of cats and kittens</h3>
+            </div>
+
+            <div>
+                <h3 id=soccer> <a href="https://www.scorebat.com/video-api/v1/">Soccer API</a></h3>
+                <h3> This API contains info of past and present soccer games and stats</h3>
+            </div>
+
         </div>
-
-        <div>
-        <h3 id=vocab> <a href="https://opentdb.com/api_config.php">Vocab API</a></h3>
-        <h3>This API has trivia questions with a range of difficulties and topics</h3>
-        </div>
-
-        <div>
-        <h3 id=weather> <a href="https://api.weather.gov">Weather API</a></h3>
-        <h3> This API contains info about the current and future weather</h3>
-        </div>
-
-        <div>
-        <h3 id=country> <a href="https://github.com/lennertVanSever/graphcountries">Country API</a></h3>
-        <h3> This API contains info of countries currency, flags, neighboring countries, etc.</h3>
-        </div>
-
-        <div>
-        <h3 id=kitten> <a href="https://github.com/joshwcomeau/RequestKittens">Kitten API</a></h3>
-        <h3> This API contains random pitures of cats and kittens</h3>
-        </div>
-
-        <div>
-        <h3 id=soccer> <a href="https://www.scorebat.com/video-api/v1/">Soccer API</a></h3>
-        <h3> This API contains info of past and present soccer games and stats</h3>
-        </div>
-        
-    </div>
         &emsp;
         <h3 id=header> Want to expand this list? submit ideas or links below!</h3>
         </script> <!-- begin wwww.htmlcommentbox.com -->
