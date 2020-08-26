@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/a17t@latest/dist/a17t.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/a17t@latest/dist/tailwind.css">
     <style>
         body {
             max-width: 40rem;
@@ -92,10 +94,10 @@
 </head>
 
 <body>
-    <h1 class="header">Welcome To the API Library</h1>
-    <h3 class="header">Here You Will Find an Assortment of Free APIs to Use in Your Projects</h3>
+    <h1 class="heading">Welcome To the API Library</h1>
+    <h3 class="subheading">Here You Will Find an Assortment of Free APIs to Use in Your Projects</h3>
     &emsp;
-    <input type="text" id="searchInput" onkeyup="performSearch()" placeholder="Search for APIs..">
+    <input class= "input" type="text" id="searchInput" onkeyup="performSearch()" placeholder="Search for APIs..">
     <script>
         function performSearch() {
             let query = document.querySelector("#searchInput").value.toLowerCase();
@@ -107,10 +109,13 @@
                 }
             }
         }
+
     </script>
-    <div class="text">
-        &emsp;
-        <div class="api">
+    <br>
+    &emsp;
+    <div class="text grid gap-3 grid-cols-3">
+
+        <div class="api card ~neutral !low">
             <h3 id="NHL"> <a href="https://github.com/dword4/nhlapi">The NHL API</a></h3>
             <h3>This API has team names, venues, cities, etc.</h3>
         </div>
